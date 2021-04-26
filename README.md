@@ -1,0 +1,3 @@
+# Custom-entity-forge
+이 모드는 마이너한 버그들이 있습니다...
+해결 가능하신 분은 pull requests로 달아주시면 좋겠습니다.

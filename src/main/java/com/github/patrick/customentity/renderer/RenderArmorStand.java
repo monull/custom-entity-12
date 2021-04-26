@@ -81,6 +81,13 @@ public class RenderArmorStand extends RenderLivingBase<EntityArmorStand>
     }
 
     @Override
+    protected void renderModel(EntityArmorStand entitylivingbaseIn, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch, float scaleFactor) {
+        if(!entitylivingbaseIn.isInvisible()) {
+            super.renderModel(entitylivingbaseIn, limbSwing, limbSwingAmount, ageInTicks, netHeadYaw, headPitch, scaleFactor);
+        }
+    }
+
+    @Override
     protected void preRenderCallback(EntityArmorStand entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {

@@ -3,7 +3,7 @@ Implementation-Title: Custom-Entity
 Implementation-Version: 1.0
 Specification-Vendor: examplemodsareus
 Specification-Title: examplemod
-Implementation-Timestamp: 2021-04-26T16:54:45+0900
+Implementation-Timestamp: 2021-04-26T22:04:59+0900
 Specification-Version: 1
 Implementation-Vendor: examplemodsareus
 

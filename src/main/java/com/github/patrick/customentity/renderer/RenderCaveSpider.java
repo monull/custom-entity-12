@@ -26,6 +26,7 @@ public class RenderCaveSpider extends RenderSpider<EntityCaveSpider>
         GlStateManager.scale(0.7F, 0.7F, 0.7F);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

@@ -123,6 +123,7 @@ public class RenderShulker extends RenderLiving<EntityShulker>
         GlStateManager.scale(0.999F, 0.999F, 0.999F);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

@@ -34,6 +34,7 @@ public class RenderEndermite extends RenderLiving<EntityEndermite>
     protected void preRenderCallback(EntityEndermite entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

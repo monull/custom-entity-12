@@ -25,6 +25,7 @@ public class RenderElderGuardian extends RenderGuardian
         GlStateManager.scale(2.35F, 2.35F, 2.35F);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

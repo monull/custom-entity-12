@@ -36,6 +36,7 @@ public class RenderGhast extends RenderLiving<EntityGhast>
         GlStateManager.color(1.0F, 1.0F, 1.0F, 1.0F);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

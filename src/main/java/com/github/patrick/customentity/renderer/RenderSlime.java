@@ -38,6 +38,7 @@ public class RenderSlime extends RenderLiving<EntitySlime>
         GlStateManager.scale(f3 * f1, 1.0F / f3 * f1, f3 * f1);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

@@ -32,6 +32,7 @@ public class RenderBat extends RenderLiving<EntityBat>
         GlStateManager.scale(0.35F, 0.35F, 0.35F);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

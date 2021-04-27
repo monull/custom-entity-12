@@ -38,6 +38,7 @@ public class RenderPigZombie extends RenderBiped<EntityPigZombie>
     protected void preRenderCallback(EntityPigZombie entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

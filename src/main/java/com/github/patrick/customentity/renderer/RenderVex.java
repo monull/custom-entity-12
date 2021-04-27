@@ -47,6 +47,7 @@ public class RenderVex extends RenderBiped<EntityVex>
         GlStateManager.scale(0.4F, 0.4F, 0.4F);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

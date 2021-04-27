@@ -35,6 +35,7 @@ public class RenderCreeper extends RenderLiving<EntityCreeper>
         GlStateManager.scale(f2, f3, f2);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

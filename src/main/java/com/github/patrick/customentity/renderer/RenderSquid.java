@@ -46,6 +46,7 @@ public class RenderSquid extends RenderLiving<EntitySquid>
     protected void preRenderCallback(EntitySquid entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

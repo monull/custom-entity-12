@@ -93,9 +93,7 @@ public class RenderArmorStand extends RenderLivingBase<EntityArmorStand>
         if(custom != null) {
             GlStateManager.translate(0.0, -custom.lastScaleY, 0.0);
             custom.applyGraphic(entitylivingbaseIn);
-        } else {
-            GlStateManager.scale(1.0F, 1.0F, 1.0F);
-            GlStateManager.color(1.0F, 1.0F, 1.0F);
+            this.shadowSize = custom.getShadowSize();
         }
     }
 }

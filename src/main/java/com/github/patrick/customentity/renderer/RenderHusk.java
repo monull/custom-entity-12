@@ -27,6 +27,7 @@ public class RenderHusk extends RenderZombie
         super.preRenderCallback(entitylivingbaseIn, partialTickTime);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

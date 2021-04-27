@@ -34,6 +34,7 @@ public class RenderMagmaCube extends RenderLiving<EntityMagmaCube>
         GlStateManager.scale(f1 * (float)i, 1.0F / f1 * (float)i, f1 * (float)i);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

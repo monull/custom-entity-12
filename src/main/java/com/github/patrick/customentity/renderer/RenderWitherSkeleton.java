@@ -30,6 +30,7 @@ public class RenderWitherSkeleton extends RenderSkeleton
         GlStateManager.scale(1.2F, 1.2F, 1.2F);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

@@ -44,6 +44,7 @@ public class RenderIronGolem extends RenderLiving<EntityIronGolem>
     protected void preRenderCallback(EntityIronGolem entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

@@ -35,6 +35,7 @@ public class RenderSnowMan extends RenderLiving<EntitySnowman>
     protected void preRenderCallback(EntitySnowman entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

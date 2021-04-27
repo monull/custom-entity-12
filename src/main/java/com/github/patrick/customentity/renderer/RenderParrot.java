@@ -42,6 +42,7 @@ public class RenderParrot extends RenderLiving<EntityParrot>
     protected void preRenderCallback(EntityParrot entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

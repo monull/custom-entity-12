@@ -56,6 +56,7 @@ public class RenderWolf extends RenderLiving<EntityWolf>
     protected void preRenderCallback(EntityWolf entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

@@ -37,6 +37,7 @@ public class RenderChicken extends RenderLiving<EntityChicken>
     protected void preRenderCallback(EntityChicken entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

@@ -42,6 +42,7 @@ public class RenderWither extends RenderLiving<EntityWither>
         GlStateManager.scale(f, f, f);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

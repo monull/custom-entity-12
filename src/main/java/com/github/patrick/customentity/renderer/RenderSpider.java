@@ -35,6 +35,7 @@ public class RenderSpider<T extends EntitySpider> extends RenderLiving<T>
     protected void preRenderCallback(T entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

@@ -55,6 +55,7 @@ public class RenderVillager extends RenderLiving<EntityVillager>
         GlStateManager.scale(f, f, f);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

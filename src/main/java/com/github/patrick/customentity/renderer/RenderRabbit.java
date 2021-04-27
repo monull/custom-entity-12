@@ -63,6 +63,7 @@ public class RenderRabbit extends RenderLiving<EntityRabbit>
     protected void preRenderCallback(EntityRabbit entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

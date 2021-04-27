@@ -30,6 +30,7 @@ public class RenderSheep extends RenderLiving<EntitySheep>
     protected void preRenderCallback(EntitySheep entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

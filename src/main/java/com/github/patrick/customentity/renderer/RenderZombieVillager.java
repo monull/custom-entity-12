@@ -62,6 +62,7 @@ public class RenderZombieVillager extends RenderBiped<EntityZombieVillager>
     protected void preRenderCallback(EntityZombieVillager entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

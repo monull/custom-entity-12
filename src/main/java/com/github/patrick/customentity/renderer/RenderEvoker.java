@@ -50,6 +50,7 @@ public class RenderEvoker extends RenderLiving<EntityMob>
         GlStateManager.scale(0.9375F, 0.9375F, 0.9375F);
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            this.shadowSize = custom.getShadowSize();
             custom.applyGraphic(entitylivingbaseIn);
         }
     }

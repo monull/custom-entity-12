@@ -34,7 +34,7 @@ public class MessageScale implements IMessage {
             if(manager != null) {
                 CustomEntity custom = manager.getCustomEntity(message.entityId);
                 if(custom != null) {
-                    custom.setScale(message.scaleX, message.scaleY, message.scaleZ, message.duration * 500000000);
+                    custom.setScale(message.scaleX, message.scaleY, message.scaleZ, message.duration * 25000000);
                 }
             }
             return null;

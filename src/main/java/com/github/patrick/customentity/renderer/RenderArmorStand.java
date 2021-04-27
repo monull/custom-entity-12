@@ -91,6 +91,7 @@ public class RenderArmorStand extends RenderLivingBase<EntityArmorStand>
     protected void preRenderCallback(EntityArmorStand entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
+            GlStateManager.translate(0.0, -custom.lastScaleY, 0.0);
             custom.applyGraphic(entitylivingbaseIn);
         } else {
             GlStateManager.scale(1.0F, 1.0F, 1.0F);

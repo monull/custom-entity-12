@@ -15,6 +15,7 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.boss.EntityDragon;
+import net.minecraft.entity.boss.EntityWither;
 import net.minecraft.entity.item.EntityArmorStand;
 import net.minecraft.entity.monster.*;
 import net.minecraft.entity.passive.*;
@@ -54,5 +55,29 @@ public class ProxyClient extends Proxy {
         Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityMagmaCube.class, new RenderMagmaCube(Minecraft.getMinecraft().getRenderManager()));
         Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityMooshroom.class, new RenderMooshroom(Minecraft.getMinecraft().getRenderManager()));
         Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityOcelot.class, new RenderOcelot(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityParrot.class, new RenderParrot(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityPig.class, new RenderPig(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityPigZombie.class, new RenderPigZombie(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityPlayer.class, new RenderPlayer(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityPolarBear.class, new RenderPolarBear(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityRabbit.class, new RenderRabbit(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntitySheep.class, new RenderSheep(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityShulker.class, new RenderShulker(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntitySilverfish.class, new RenderSilverfish(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntitySkeleton.class, new RenderSkeleton(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntitySlime.class, new RenderSlime(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntitySnowman.class, new RenderSnowMan(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntitySpider.class, new RenderSpider<EntitySpider>(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntitySquid.class, new RenderSquid(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityStray.class, new RenderStray(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityVex.class, new RenderVex(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityVillager.class, new RenderVillager(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityVindicator.class, new RenderVindicator(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityWitch.class, new RenderWitch(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityWither.class, new RenderWither(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityWitherSkeleton.class, new RenderWitherSkeleton(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityWolf.class, new RenderWolf(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityZombie.class, new RenderZombie(Minecraft.getMinecraft().getRenderManager()));
+        Minecraft.getMinecraft().getRenderManager().entityRenderMap.put(EntityZombieVillager.class, new RenderZombieVillager(Minecraft.getMinecraft().getRenderManager()));
     }
 }

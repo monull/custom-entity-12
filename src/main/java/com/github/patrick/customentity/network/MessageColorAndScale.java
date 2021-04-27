@@ -40,7 +40,7 @@ public class MessageColorAndScale implements IMessage {
             if(manager != null) {
                 CustomEntity custom = manager.getCustomEntity(message.entityId);
                 if(custom != null) {
-                    custom.setColorAndScale(message.colorR & 255, message.colorG & 255, message.colorB & 255, message.scaleX, message.scaleY, message.scaleZ, message.duration * 500000000);
+                    custom.setColorAndScale(message.colorR & 255, message.colorG & 255, message.colorB & 255, message.scaleX, message.scaleY, message.scaleZ, message.duration * 25000000);
                 }
             }
             return null;

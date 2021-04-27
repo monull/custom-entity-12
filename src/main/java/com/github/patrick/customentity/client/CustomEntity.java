@@ -168,4 +168,7 @@ public class CustomEntity {
             }
         }
     }
+    public float getShadowSize() {
+        return Math.max(this.lastScaleX, this.lastScaleZ);
+    }
 }

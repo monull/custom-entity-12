@@ -34,7 +34,7 @@ public class MessageColor implements IMessage {
             if(manager != null) {
                 CustomEntity custom = manager.getCustomEntity(message.entityId);
                 if(custom != null) {
-                    custom.setColor(message.colorR & 255, message.colorG & 255, message.colorB & 255, message.duration * 500000000);
+                    custom.setColor(message.colorR & 255, message.colorG & 255, message.colorB & 255, message.duration * 25000000);
                 }
             }
             return null;

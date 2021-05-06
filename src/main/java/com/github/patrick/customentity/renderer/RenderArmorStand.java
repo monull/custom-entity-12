@@ -2,6 +2,7 @@ package com.github.patrick.customentity.renderer;
 
 import com.github.patrick.customentity.client.CustomEntity;
 import com.github.patrick.customentity.client.CustomEntityManager;
+import com.github.patrick.customentity.renderer.layer.LayerItemHead;
 import net.minecraft.client.model.ModelArmorStand;
 import net.minecraft.client.model.ModelArmorStandArmor;
 import net.minecraft.client.renderer.GlStateManager;
@@ -36,7 +37,7 @@ public class RenderArmorStand extends RenderLivingBase<EntityArmorStand>
         this.addLayer(layerbipedarmor);
         this.addLayer(new LayerHeldItem(this));
         this.addLayer(new LayerElytra(this));
-        this.addLayer(new LayerCustomHead(this.getMainModel().bipedHead));
+        this.addLayer(new LayerItemHead(this.getMainModel().bipedHead));
     }
 
     protected ResourceLocation getEntityTexture(EntityArmorStand entity)
@@ -91,9 +92,9 @@ public class RenderArmorStand extends RenderLivingBase<EntityArmorStand>
     protected void preRenderCallback(EntityArmorStand entitylivingbaseIn, float partialTickTime) {
         CustomEntity custom = CustomEntityManager.getOrCreateInstance().getCustomEntity(entitylivingbaseIn.getEntityId());
         if(custom != null) {
-            GlStateManager.translate(0.0, -custom.lastScaleY, 0.0);
             custom.applyGraphic(entitylivingbaseIn);
             this.shadowSize = custom.getShadowSize();
         }
     }
+
 }
